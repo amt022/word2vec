@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    Result
+{% endblock %}
+
+{% block body%}
+    <table border="1px" align="center">
+        <tr>
+            <th>Similar Word</th>
+            <th>Percentage Of Similarity</th>
+            <th></th>
+        </tr>
+        <tr>
+            {% for word,key in sim_words.items() %}
+                <tr>
+                    <td>{{word}}</td>
+                    <td>{{key*100}}</td>
+                    <td><progress value="{{key*100}}" max="100"> {{key*100}} </progress></td>
+                </tr>
+            {% endfor %}
+        </tr>
+    </table>
+        
+        
+{% endblock %}
