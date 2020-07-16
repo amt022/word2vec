@@ -3,6 +3,7 @@ import bs4 as bs
 import urllib.request
 import re
 import nltk
+nltk.download('punkt')
 from nltk.corpus import stopwords
 from gensim.models import Word2Vec
 from nltk.corpus import stopwords
